@@ -1,0 +1,292 @@
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/* Mini reset, no margins, paddings or bullets */
+.menu,
+.submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Main level */
+.menu {			
+  margin: 50px auto;
+  width: 800px;
+  /* http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value */
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;	
+}
+
+.menu > li {
+  background: #34495e;
+  float: left;
+  position: relative;
+  transform: skewX(25deg);
+}
+
+.menu a {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Arial, Helvetica;
+  font-size: 14px;
+}		
+
+.menu li:hover {
+  background: #e74c3c;
+}		
+
+.menu > li > a {
+  transform: skewX(-25deg);
+  padding: 1em 2em;
+}
+
+/* Dropdown */
+.submenu {
+  position: absolute;
+  width: 200px;
+  left: 50%; margin-left: -100px;
+  transform: skewX(-25deg);
+  transform-origin: left top;
+}
+
+.submenu li {
+  background-color: #34495e;
+  position: relative;
+  overflow: hidden;		
+}						
+
+.submenu > li > a {
+  padding: 1em 2em;			
+}
+
+.submenu > li::after {
+  content: '';
+  position: absolute;
+  top: -125%;
+  height: 100%;
+  width: 100%;			
+  box-shadow: 0 0 50px rgba(0, 0, 0, .9);			
+}		
+
+/* Odd stuff */
+.submenu > li:nth-child(odd){
+  transform: skewX(-25deg) translateX(0);
+}
+
+.submenu > li:nth-child(odd) > a {
+  transform: skewX(25deg);
+}
+
+.submenu > li:nth-child(odd)::after {
+  right: -50%;
+  transform: skewX(-25deg) rotate(3deg);
+}				
+
+/* Even stuff */
+.submenu > li:nth-child(even){
+  transform: skewX(25deg) translateX(0);
+}
+
+.submenu > li:nth-child(even) > a {
+  transform: skewX(-25deg);
+}
+
+.submenu > li:nth-child(even)::after {
+  left: -50%;
+  transform: skewX(25deg) rotate(3deg);
+}
+
+/* Show dropdown */
+.submenu,
+.submenu li {
+  opacity: 0;
+  visibility: hidden;			
+}
+
+.submenu li {
+  transition: .2s ease transform;
+}
+
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li {
+  opacity: 1;
+  visibility: visible;
+}		
+
+.menu > li:hover .submenu li:nth-child(even){
+  transform: skewX(25deg) translateX(15px);			
+}
+
+.menu > li:hover .submenu li:nth-child(odd){
+  transform: skewX(-25deg) translateX(-15px);			
+}
+body{
+  background-color: rgb(2, 2, 44);
+}
+
+
+li{
+  display: inline-block;
+  font-size: 15pt;
+  margin: 5px 13px;
+}
+.navbar{
+  width: 100%;
+  background-color: rgb(255, 255, 255)
+}
+.home{
+  width: 100%;
+  height: 80vh;
+  background-image:  url(https://cybersport.metaratings.ru/upload/iblock/df7/df755c35f2d46ca05f3ff7c2c2139289.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 30vh;
+  color: rgb(255, 255, 255);
+}
+.content{
+  margin-left:100px;
+}
+.home h1{
+  font-weight: 500;
+  font-size: 22pt;
+
+}
+.home h1:nth-child(2){
+  margin-bottom: 5vh;
+
+
+}
+span{
+  background-color:  rgba(0, 0, 0, 0.1);
+}
+.home button{
+  padding:10px 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1) ;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.imeg{
+  width: 100%;
+  height: auto;
+  background-color: rgb(3, 3, 100);
+  margin-top: 30vh;
+
+}
+.imeg1{
+  width: 33%;
+  height: 40vh;
+  background-image: url(https://images.hdqwalls.com/download/rise-of-the-mummies-pubg-21-1920x1200.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 30vh;
+  color: white;
+  margin-left: 3px;
+
+  display: inline-block;
+}
+.imeg2{
+  width: 33%;
+  height: 40vh;
+  background-image:url(https://images.hdqwalls.com/download/2020-pubg-4k-game-oi-1152x864.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 30vh;
+  color: white;
+ 
+  display: inline-block;
+}
+.imeg3{
+  width: 33%;
+  height: 40vh;
+  background-image: url(https://www.xtrafondos.com/wallpapers/vertical/pubg-temporada-2020-6320.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 30vh;
+  color: white;
+ 
+  display: inline-block;
+}
+.imeg4{
+  width: 20%;
+  height: 40vh;
+  background-image: url(https://i.pinimg.com/736x/36/b9/86/36b9864914f2778db34c95abdc72fa1c.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 30vh;
+  color: white;
+  
+  display: inline-block;
+}
+.imeg5{
+  width: 20%;
+  height: 40vh;
+  background-image: url(https://wallpapercave.com/wp/wp8951786.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 30vh;
+  color: white;
+  
+  display: inline-block;
+  
+
+}
+.imeg6{
+  width: 20%;
+  height: 40vh;
+  background-image: url(https://thypix.com/wp-content/uploads/2021/04/pubg-mobile-wallpaper-45-700x1245.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 30vh;
+  color: white;
+  
+  display: inline-block;
+}  
+.imeg7{
+  width: 20%;
+  height: 40vh;
+  background-image: url(https://sun9-3.userapi.com/impg/V0IED1r01Z9kQy7RWgAx8VWzjiOrZXc8PoF_4g/mi6BVggTNIs.jpg?size=607x1080&quality=96&sign=27d9496117b2878acffbecaffb324b54&c_uniq_tag=b9CLhBQF2VZbB9UiuNWHa-H0gqyRjYnZHc0k66nYbyA&type=album);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 30vh;
+  color: white;
+  
+  display: inline-block;
+} 
+.imeg8{
+  width: 19%;
+  height: 40vh;
+  background-image: url(https://images.hdqwalls.com/download/pubg-key-art-4k-04-2048x2048.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 30vh;
+  color: white;
+  
+  display: inline-block;
+  display: inline-block;
+}
